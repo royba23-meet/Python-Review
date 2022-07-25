@@ -1,7 +1,4 @@
-import string
-
-
-def createYouTubeVideo(title: string, description: string, tags: list):
+def createYouTubeVideo(title: str, description: str, tags: list):
     if tags is None:
         tags = []
     elif len(tags) > 5: # if there are more than 5 tags, only use the first 5
@@ -16,7 +13,7 @@ def dislike(video: dict):
     video["dislikes"] += 1
     return video
 
-def addComment(video: dict, username: string, comment: string):
+def addComment(video: dict, username: str, comment: str):
     video["comments"][username] = comment
     return video
 
@@ -29,7 +26,7 @@ def compareVideos(video1: dict, video2: dict):
 
 def main():
 
-    video = createYouTubeVideo("My Video", "This is my video")
+    video = createYouTubeVideo("My Video", "This is my video", [])
     print(video)
 
 
